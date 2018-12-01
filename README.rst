@@ -3,12 +3,14 @@ discord.py
 
 .. image:: https://img.shields.io/pypi/v/discord.py.svg
    :target: https://pypi.python.org/pypi/discord.py
+OLD
 .. image:: https://img.shields.io/pypi/pyversions/discord.py.svg
    :target: https://pypi.python.org/pypi/discord.py
+OLD
 
 discord.py is an API wrapper for Discord written in Python.
 
-This was written to allow easier writing of bots or chat logs. Make sure to familiarise yourself with the API using the `documentation <http://discordpy.rtfd.org/en/latest>`__.
+This was written to allow easier writing of bots or chat logs. Make sure to familiarise yourself with the API using the `documentation <http://discordpy.rtfd.org/en/rewrite>`__.
 
 Breaking Changes
 ---------------
@@ -24,26 +26,27 @@ To install the library without full voice support, you can just run the followin
 
 .. code:: sh
 
-    python3 -m pip install -U discord.py
+    python3 -m pip install -U https://github.com/Tidanium/discord.py/archive/rewrite.zip
 
-Otherwise to get voice support you should run the following command:
-
-.. code:: sh
-
-    python3 -m pip install -U discord.py[voice]
-
-
-To install the development version, do the following:
+To install the development/voice version, do the following:
 
 .. code:: sh
 
-    python3 -m pip install -U https://github.com/Rapptz/discord.py/archive/master.zip#egg=discord.py[voice]
+    python3 -m pip install -U https://github.com/Tidanium/discord.py/archive/rewrite.zip#egg=discord.py[voice]
 
-or the more long winded from cloned source:
+for the more long winded from cloned source without voice support:
 
 .. code:: sh
 
-    $ git clone https://github.com/Rapptz/discord.py
+   $ git clone -b rewrite https://github.com/Tidanium/discord.py
+   $ cd discord.py
+   $ python3 -m pip install -U .
+
+or the more long winded from cloned source with voice support:
+
+.. code:: sh
+
+    $ git clone -b rewrite https://github.com/Tidanium/discord.py
     $ cd discord.py
     $ python3 -m pip install -U .[voice]
 
@@ -100,5 +103,4 @@ Requirements
   - On Linux systems this requires the ``libffi`` library. You can install in
     debian based systems by doing ``sudo apt-get install libffi-dev``.
 
-Usually ``pip`` will handle these for you.
-
+Usually ``pip`` will handle these for you, but this being outdated by the original developer, pip has an outdated version registered.
